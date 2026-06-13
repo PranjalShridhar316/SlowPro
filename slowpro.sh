@@ -21,6 +21,9 @@ source "$SCRIPT_DIR/collectors/host_collector.sh"
 source "$SCRIPT_DIR/collectors/user_collector.sh"
 source "$SCRIPT_DIR/collectors/process_collector.sh"
 source "$SCRIPT_DIR/collectors/network_collector.sh"
+source "$SCRIPT_DIR/collectors/service_collector.sh"
+source "$SCRIPT_DIR/collectors/package_collector.sh"
+source "$SCRIPT_DIR/core/integrity.sh"
 
 # Display startup banner
 banner
@@ -62,6 +65,22 @@ collect_processes "$CASE_PATH"
 # Collect network information
 log_info "Collecting network information..."
 collect_network "$CASE_PATH"
+
+# Gather system service information
+log_info "Collecting service information..."
+collect_services "$CASE_PATH"
+
+# Gather information about network packages
+log_info "Collecting installed packages..."
+collect_packages "$CASE_PATH"
+
+# Collect installed packages
+log_info "Collecting installed packages..."
+collect_packages "$CASE_PATH"
+
+# Generate integrity hashes
+log_info "Generating evidence hashes..."
+generate_hashes "$CASE_PATH"
 
 # Evidence collection completed
 log_success "Evidence collection completed."
