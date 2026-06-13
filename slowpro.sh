@@ -1,12 +1,12 @@
 #!/bin/bash
 
-#/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+#==============================================
 # SlowPro
 # Multi-Distro Linux DFIR Framework
 #
 # Main Entry Point
 # Loads required modules and starts workflows.
-# \/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
+# =============================================
 
 # Absolute path to SlowPro root directory
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
@@ -17,6 +17,10 @@ source "$SCRIPT_DIR/core/utils.sh"
 source "$SCRIPT_DIR/core/case_manager.sh"
 source "$SCRIPT_DIR/core/init.sh"
 source "$SCRIPT_DIR/core/distro_detector.sh"
+source "$SCRIPT_DIR/collectors/host_collector.sh"
+source "$SCRIPT_DIR/collectors/user_collector.sh"
+source "$SCRIPT_DIR/collectors/process_collector.sh"
+source "$SCRIPT_DIR/collectors/network_collector.sh"
 
 # Display startup banner
 banner
@@ -40,3 +44,24 @@ ADAPTER=$(load_adapter "$DISTRO")
 log_info "Distribution: $DISTRO"
 log_info "Package Manager: $PACKAGE_MANAGER"
 log_info "Adapter Loaded: $ADAPTER"
+
+
+# Evidence Collection Phase
+# Collect host information
+log_info "Collecting host information..."
+collect_host_info "$CASE_PATH"
+
+# Collect local users
+log_info "Collecting user information..."
+collect_users "$CASE_PATH"
+
+# Collect running processes
+log_info "Collecting process information..."
+collect_processes "$CASE_PATH"
+
+# Collect network information
+log_info "Collecting network information..."
+collect_network "$CASE_PATH"
+
+# Evidence collection completed
+log_success "Evidence collection completed."
