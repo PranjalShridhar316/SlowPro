@@ -11,7 +11,7 @@ TIMESTAMP=$(date +"%Y-%m-%d_%H-%M-%S")
 CASE_ID="CASE_${TIMESTAMP}"
 
 # Define case path
-CASE_DIR="cases/${CASE_ID}"
+CASE_DIR="$SCRIPT_DIR/cases/${CASE_ID}"
 
 # Create case directory
 mkdir -p \
