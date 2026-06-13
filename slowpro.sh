@@ -24,6 +24,7 @@ source "$SCRIPT_DIR/collectors/network_collector.sh"
 source "$SCRIPT_DIR/collectors/service_collector.sh"
 source "$SCRIPT_DIR/collectors/package_collector.sh"
 source "$SCRIPT_DIR/core/integrity.sh"
+source "$SCRIPT_DIR/collectors/metadata_collector.sh"
 
 # Display startup banner
 banner
@@ -48,6 +49,9 @@ log_info "Distribution: $DISTRO"
 log_info "Package Manager: $PACKAGE_MANAGER"
 log_info "Adapter Loaded: $ADAPTER"
 
+# Generate collection metadata
+log_info "Generating collection metadata..."
+collect_metadata "$CASE_PATH"
 
 # Evidence Collection Phase
 # Collect host information
