@@ -97,7 +97,7 @@ Recommended:
 Clone repository:
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/PranjalShridhar316/SlowPro.git
 cd SlowPro
 ```
 
@@ -405,7 +405,7 @@ MIT License
 
 **Pranjal Shridhar Verma**
 
-Student|Linux Administrator | RHCSA Candidate | Cybersecurity Enthusiast
+Student |Linux Administrator | RHCSA Candidate | Cybersecurity Enthusiast
 
 SlowPro was developed as a hands-on Digital Forensics and Incident Response (DFIR) project to strengthen practical skills in:
 
@@ -417,5 +417,12 @@ SlowPro was developed as a hands-on Digital Forensics and Incident Response (DFI
 * Security Automation
 
 The project focuses on building DFIR capabilities using native Linux tools and Bash while maintaining compatibility across multiple Linux distributions.
+
+---
+
+## Contributors
+- [Pranjal Shridhar Verma](https://github.com/PranjalShridhar316) – Project Lead
+- Ashita Dhiman – Banner Design
+
 
 
