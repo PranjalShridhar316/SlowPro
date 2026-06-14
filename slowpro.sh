@@ -28,6 +28,7 @@ source "$SCRIPT_DIR/collectors/metadata_collector.sh"
 source "$SCRIPT_DIR/analyzers/ioc_analyzer.sh"
 source "$SCRIPT_DIR/analyzers/threat_scoring.sh"
 source "$SCRIPT_DIR/analyzers/timeline_builder.sh"
+source "$SCRIPT_DIR/analyzers/report_generator.sh"
 
 # Display startup banner
 banner
@@ -96,6 +97,10 @@ calculate_threat_score "$CASE_PATH"
 # Timeline reconstruction
 log_info "Building investigation timeline..."
 build_timeline "$CASE_PATH"
+
+# Generate HTML report
+log_info "Generating HTML report..."
+generate_report "$CASE_PATH"
 
 # Evidence collection completed
 log_success "Evidence collection completed."
