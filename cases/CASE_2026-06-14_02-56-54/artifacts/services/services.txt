@@ -1,0 +1,40 @@
+  UNIT                                     LOAD   ACTIVE SUB     DESCRIPTION
+  console-setup.service                    loaded active exited  Set console font and keymap
+  cron.service                             loaded active running Regular background program processing daemon
+  dbus.service                             loaded active running D-Bus System Message Bus
+  fail2ban.service                         loaded active running Fail2Ban Service
+● getty@tty1.service                       loaded failed failed  Getty on tty1
+  keyboard-setup.service                   loaded active exited  Set the console keyboard layout
+  kmod-static-nodes.service                loaded active exited  Create List of Static Device Nodes
+● logrotate.service                        loaded failed failed  Rotate log files
+  polkit.service                           loaded active running Authorization Manager
+  rsyslog.service                          loaded active running System Logging Service
+  setvtrgb.service                         loaded active exited  Set console scheme
+  snapd.seeded.service                     loaded active exited  Wait until snapd is fully seeded
+  ssh.service                              loaded active running OpenBSD Secure Shell server
+  systemd-journal-flush.service            loaded active exited  Flush Journal to Persistent Storage
+  systemd-journald.service                 loaded active running Journal Service
+  systemd-logind.service                   loaded active running User Login Management
+  systemd-modules-load.service             loaded active exited  Load Kernel Modules
+  systemd-remount-fs.service               loaded active exited  Remount Root and Kernel File Systems
+  systemd-resolved.service                 loaded active running Network Name Resolution
+  systemd-sysctl.service                   loaded active exited  Apply Kernel Variables
+  systemd-timesyncd.service                loaded active running Network Time Synchronization
+  systemd-tmpfiles-setup-dev-early.service loaded active exited  Create Static Device Nodes in /dev gracefully
+  systemd-tmpfiles-setup-dev.service       loaded active exited  Create Static Device Nodes in /dev
+  systemd-tmpfiles-setup.service           loaded active exited  Create Volatile Files and Directories
+  systemd-udev-trigger.service             loaded active exited  Coldplug All udev Devices
+  systemd-udevd.service                    loaded active running Rule-based Manager for Device Events and Files
+  systemd-update-utmp.service              loaded active exited  Record System Boot/Shutdown in UTMP
+  systemd-user-sessions.service            loaded active exited  Permit User Sessions
+  unattended-upgrades.service              loaded active running Unattended Upgrades Shutdown
+  user-runtime-dir@1000.service            loaded active exited  User Runtime Directory /run/user/1000
+  user@1000.service                        loaded active running User Manager for UID 1000
+  wsl-pro.service                          loaded active running Bridge to Ubuntu Pro agent on Windows
+
+Legend: LOAD   → Reflects whether the unit definition was properly loaded.
+        ACTIVE → The high-level unit activation state, i.e. generalization of SUB.
+        SUB    → The low-level unit activation state, values depend on unit type.
+
+32 loaded units listed. Pass --all to see loaded but inactive units, too.
+To show all installed unit files use 'systemctl list-unit-files'.

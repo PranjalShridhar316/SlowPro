@@ -27,6 +27,7 @@ source "$SCRIPT_DIR/core/integrity.sh"
 source "$SCRIPT_DIR/collectors/metadata_collector.sh"
 source "$SCRIPT_DIR/analyzers/ioc_analyzer.sh"
 source "$SCRIPT_DIR/analyzers/threat_scoring.sh"
+source "$SCRIPT_DIR/analyzers/timeline_builder.sh"
 
 # Display startup banner
 banner
@@ -95,6 +96,10 @@ analyze_iocs "$CASE_PATH"
 # Calculating threat score
 log_info "Calculating threat score..."
 calculate_threat_score "$CASE_PATH"
+
+# Timeline reconstruction
+log_info "Building investigation timeline..."
+build_timeline "$CASE_PATH"
 
 # Evidence collection completed
 log_success "Evidence collection completed."
