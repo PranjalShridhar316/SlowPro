@@ -418,4 +418,11 @@ SlowPro was developed as a hands-on Digital Forensics and Incident Response (DFI
 
 The project focuses on building DFIR capabilities using native Linux tools and Bash while maintaining compatibility across multiple Linux distributions.
 
+---
+
+## Contributors
+- [Pranjal Shridhar Verma](https://github.com/PranjalShridhar316) – Project Lead
+- Ashita Dhiman – Banner Design
+
+
 
