@@ -77,10 +77,6 @@ collect_network "$CASE_PATH"
 log_info "Collecting service information..."
 collect_services "$CASE_PATH"
 
-# Gather information about network packages
-log_info "Collecting installed packages..."
-collect_packages "$CASE_PATH"
-
 # Collect installed packages
 log_info "Collecting installed packages..."
 collect_packages "$CASE_PATH"
