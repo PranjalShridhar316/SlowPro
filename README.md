@@ -1,3 +1,5 @@
+![Project Banner](banner/banner.png)
+
 # SlowPro 🐢
 
 Developed by **Pranjal Shridhar Verma**
