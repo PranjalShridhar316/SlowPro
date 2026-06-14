@@ -425,4 +425,5 @@ The project focuses on building DFIR capabilities using native Linux tools and B
 - Ashita Dhiman – Banner Design
 
 
-
+## LICENSE
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
