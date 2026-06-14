@@ -1,0 +1,6 @@
+nc
+netcat
+ncat
+socat
+cryptominer
+xmrig

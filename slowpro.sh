@@ -25,6 +25,7 @@ source "$SCRIPT_DIR/collectors/service_collector.sh"
 source "$SCRIPT_DIR/collectors/package_collector.sh"
 source "$SCRIPT_DIR/core/integrity.sh"
 source "$SCRIPT_DIR/collectors/metadata_collector.sh"
+source "$SCRIPT_DIR/analyzers/ioc_analyzer.sh"
 
 # Display startup banner
 banner
@@ -85,6 +86,10 @@ collect_packages "$CASE_PATH"
 # Generate integrity hashes
 log_info "Generating evidence hashes..."
 generate_hashes "$CASE_PATH"
+
+# Analyze collected evidence
+log_info "Running IOC analysis..."
+analyze_iocs "$CASE_PATH"
 
 # Evidence collection completed
 log_success "Evidence collection completed."
