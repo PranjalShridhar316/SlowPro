@@ -1,0 +1,10 @@
+==================================
+   SlowPro Comparison Report
+==================================
+
+[New Users]
+
+[New Processes]
+/usr/lib/polkit-1/polkitd
+
+[New Listening Ports]
