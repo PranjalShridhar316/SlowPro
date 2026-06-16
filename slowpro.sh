@@ -36,6 +36,8 @@ source "$SCRIPT_DIR/collectors/package_collector.sh"
 source "$SCRIPT_DIR/collectors/metadata_collector.sh"
 source "$SCRIPT_DIR/collectors/authlog_collector.sh"
 
+#===============================================
+
 # Analyzers
 
 source "$SCRIPT_DIR/analyzers/ioc_analyzer.sh"
@@ -45,6 +47,7 @@ source "$SCRIPT_DIR/analyzers/report_generator.sh"
 source "$SCRIPT_DIR/analyzers/snapshot_compare.sh"
 source "$SCRIPT_DIR/analyzers/authlog_analyzer.sh"
 source "$SCRIPT_DIR/analyzers/ssh_bruteforce_detector.sh"
+source "$SCRIPT_DIR/analyzers/ioc_matcher.sh"
 
 #=================================================
 
@@ -141,6 +144,9 @@ generate_hashes "$CASE_PATH"
 # Analysis Phase
 log_info "Running IOC analysis..."
 analyze_iocs "$CASE_PATH"
+
+log_info "Running IOC matching engine..."
+match_iocs "$CASE_PATH"
 
 log_info "Calculating threat score..."
 calculate_threat_score "$CASE_PATH"

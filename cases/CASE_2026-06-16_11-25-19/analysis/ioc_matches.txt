@@ -1,0 +1,16 @@
+==================================
+      SlowPro IOC Matches
+==================================
+
+[IOC MATCH]
+Indicator: nc
+Source: processes.json
+
+[IOC MATCH]
+Indicator: nc
+Source: network.txt
+
+[IOC MATCH]
+Indicator: python3
+Source: processes.json
+

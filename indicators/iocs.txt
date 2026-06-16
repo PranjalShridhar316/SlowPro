@@ -1,0 +1,7 @@
+nc
+ncat
+socat
+netcat
+8.8.8.8
+1.2.3.4
+python3
