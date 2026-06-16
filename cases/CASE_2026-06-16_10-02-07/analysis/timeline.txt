@@ -1,0 +1,14 @@
+==================================
+      SlowPro Timeline
+==================================
+
+2026-06-16T10:02:07+00:00 | Case Created
+2026-06-16T10:02:07+00:00 | Host Collection Completed
+2026-06-16T10:02:07+00:00 | User Collection Completed
+2026-06-16T10:02:07+00:00 | Process Collection Completed
+2026-06-16T10:02:07+00:00 | Network Collection Completed
+2026-06-16T10:02:07+00:00 | Service Collection Completed
+2026-06-16T10:02:07+00:00 | Package Collection Completed
+2026-06-16T10:02:07+00:00 | Integrity Verification Completed
+2026-06-16T10:02:07+00:00 | IOC Analysis Completed
+2026-06-16T10:02:07+00:00 | Threat Scoring Completed

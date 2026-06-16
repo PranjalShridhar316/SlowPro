@@ -1,0 +1,9 @@
+{
+"case_id": "CASE_2026-06-16_10-01-33",
+"collector": "SlowPro",
+"version": "1.0",
+"collection_time": "2026-06-16T10:01:33+00:00",
+"hostname": "PAHADImirg",
+"distribution": "Ubuntu 24.04.1 LTS",
+"package_manager": "apt"
+}

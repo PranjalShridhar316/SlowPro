@@ -44,6 +44,7 @@ source "$SCRIPT_DIR/analyzers/timeline_builder.sh"
 source "$SCRIPT_DIR/analyzers/report_generator.sh"
 source "$SCRIPT_DIR/analyzers/snapshot_compare.sh"
 source "$SCRIPT_DIR/analyzers/authlog_analyzer.sh"
+source "$SCRIPT_DIR/analyzers/ssh_bruteforce_detector.sh"
 
 #=================================================
 
@@ -159,6 +160,10 @@ collect_auth_logs "$CASE_PATH"
 # Authentication log analysis
 log_info "Analyzing authentication logs..."
 analyze_auth_logs "$CASE_PATH"
+
+# Brutefore detection
+log_info "Detecting SSH brute force activity..."
+detect_ssh_bruteforce "$CASE_PATH"
 
 # Complete
 log_success "Evidence collection completed."
