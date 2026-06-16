@@ -1,0 +1,9 @@
+==================================
+   SlowPro Authentication Report
+==================================
+
+[Failed SSH Logins]
+
+[Successful SSH Logins]
+
+[Invalid Users]

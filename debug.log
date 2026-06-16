@@ -1,0 +1,378 @@
++++ dirname ./slowpro.sh
+++ cd .
+++ pwd
++ SCRIPT_DIR=/mnt/h/project/weekend_projects/project3/SlowPro
++ source /mnt/h/project/weekend_projects/project3/SlowPro/core/logger.sh
++ source /mnt/h/project/weekend_projects/project3/SlowPro/core/utils.sh
++ source /mnt/h/project/weekend_projects/project3/SlowPro/core/case_manager.sh
++ source /mnt/h/project/weekend_projects/project3/SlowPro/core/init.sh
++ source /mnt/h/project/weekend_projects/project3/SlowPro/core/distro_detector.sh
++ source /mnt/h/project/weekend_projects/project3/SlowPro/core/integrity.sh
++ source /mnt/h/project/weekend_projects/project3/SlowPro/collectors/host_collector.sh
++ source /mnt/h/project/weekend_projects/project3/SlowPro/collectors/user_collector.sh
++ source /mnt/h/project/weekend_projects/project3/SlowPro/collectors/process_collector.sh
++ source /mnt/h/project/weekend_projects/project3/SlowPro/collectors/network_collector.sh
++ source /mnt/h/project/weekend_projects/project3/SlowPro/collectors/service_collector.sh
++ source /mnt/h/project/weekend_projects/project3/SlowPro/collectors/package_collector.sh
++ source /mnt/h/project/weekend_projects/project3/SlowPro/collectors/metadata_collector.sh
++ source /mnt/h/project/weekend_projects/project3/SlowPro/collectors/authlog_collector.sh
++ source /mnt/h/project/weekend_projects/project3/SlowPro/analyzers/ioc_analyzer.sh
++ source /mnt/h/project/weekend_projects/project3/SlowPro/analyzers/threat_scoring.sh
++ source /mnt/h/project/weekend_projects/project3/SlowPro/analyzers/timeline_builder.sh
++ source /mnt/h/project/weekend_projects/project3/SlowPro/analyzers/report_generator.sh
++ source /mnt/h/project/weekend_projects/project3/SlowPro/analyzers/snapshot_compare.sh
++ source /mnt/h/project/weekend_projects/project3/SlowPro/analyzers/authlog_analyzer.sh
++ [[ '' == \-\-\c\o\m\p\a\r\e ]]
++ banner
++ echo ======================================
+======================================
++ echo '             SlowPro                  '
+             SlowPro                  
++ echo 'Linux Forensics . Threat Hunting .    '
+Linux Forensics . Threat Hunting .    
++ echo '        Incident Response             '
+        Incident Response             
++ echo ======================================
+======================================
++ check_root
++ [[ 0 -ne 0 ]]
++ log_info 'Creating investigation case...'
++ echo '[INFO] Creating investigation case...'
+[INFO] Creating investigation case...
+++ create_case
++++ date +%Y-%m-%d_%H-%M-%S
+++ TIMESTAMP=2026-06-16_09-53-25
+++ CASE_ID=CASE_2026-06-16_09-53-25
+++ CASE_DIR=/mnt/h/project/weekend_projects/project3/SlowPro/cases/CASE_2026-06-16_09-53-25
+++ mkdir -p /mnt/h/project/weekend_projects/project3/SlowPro/cases/CASE_2026-06-16_09-53-25/artifacts/host /mnt/h/project/weekend_projects/project3/SlowPro/cases/CASE_2026-06-16_09-53-25/artifacts/users /mnt/h/project/weekend_projects/project3/SlowPro/cases/CASE_2026-06-16_09-53-25/artifacts/processes /mnt/h/project/weekend_projects/project3/SlowPro/cases/CASE_2026-06-16_09-53-25/artifacts/network /mnt/h/project/weekend_projects/project3/SlowPro/cases/CASE_2026-06-16_09-53-25/artifacts/logs /mnt/h/project/weekend_projects/project3/SlowPro/cases/CASE_2026-06-16_09-53-25/artifacts/services /mnt/h/project/weekend_projects/project3/SlowPro/cases/CASE_2026-06-16_09-53-25/artifacts/packages /mnt/h/project/weekend_projects/project3/SlowPro/cases/CASE_2026-06-16_09-53-25/analysis /mnt/h/project/weekend_projects/project3/SlowPro/cases/CASE_2026-06-16_09-53-25/integrity /mnt/h/project/weekend_projects/project3/SlowPro/cases/CASE_2026-06-16_09-53-25/reports /mnt/h/project/weekend_projects/project3/SlowPro/cases/CASE_2026-06-16_09-53-25/archive
+++ echo /mnt/h/project/weekend_projects/project3/SlowPro/cases/CASE_2026-06-16_09-53-25
++ CASE_PATH=/mnt/h/project/weekend_projects/project3/SlowPro/cases/CASE_2026-06-16_09-53-25
++ log_success 'Case created: /mnt/h/project/weekend_projects/project3/SlowPro/cases/CASE_2026-06-16_09-53-25'
++ echo '[SUCCESS] Case created: /mnt/h/project/weekend_projects/project3/SlowPro/cases/CASE_2026-06-16_09-53-25'
+[SUCCESS] Case created: /mnt/h/project/weekend_projects/project3/SlowPro/cases/CASE_2026-06-16_09-53-25
+++ detect_distro
+++ [[ ! -f /etc/os-release ]]
+++ source /etc/os-release
++++ PRETTY_NAME='Ubuntu 24.04.1 LTS'
++++ NAME=Ubuntu
++++ VERSION_ID=24.04
++++ VERSION='24.04.1 LTS (Noble Numbat)'
++++ VERSION_CODENAME=noble
++++ ID=ubuntu
++++ ID_LIKE=debian
++++ HOME_URL=https://www.ubuntu.com/
++++ SUPPORT_URL=https://help.ubuntu.com/
++++ BUG_REPORT_URL=https://bugs.launchpad.net/ubuntu/
++++ PRIVACY_POLICY_URL=https://www.ubuntu.com/legal/terms-and-policies/privacy-policy
++++ UBUNTU_CODENAME=noble
++++ LOGO=ubuntu-logo
+++ echo ubuntu
++ DISTRO=ubuntu
+++ detect_package_manager ubuntu
+++ case "$1" in
+++ echo apt
++ PACKAGE_MANAGER=apt
+++ load_adapter ubuntu
+++ local distro=ubuntu
+++ [[ -f /mnt/h/project/weekend_projects/project3/SlowPro/adapters/ubuntu.sh ]]
+++ source /mnt/h/project/weekend_projects/project3/SlowPro/adapters/ubuntu.sh
++++ ADAPTER_NAME=Ubuntu
+++ echo Ubuntu
++ ADAPTER=Ubuntu
++ log_info 'Distribution: ubuntu'
++ echo '[INFO] Distribution: ubuntu'
+[INFO] Distribution: ubuntu
++ log_info 'Package Manager: apt'
++ echo '[INFO] Package Manager: apt'
+[INFO] Package Manager: apt
++ log_info 'Adapter Loaded: Ubuntu'
++ echo '[INFO] Adapter Loaded: Ubuntu'
+[INFO] Adapter Loaded: Ubuntu
++ log_info 'Generating collection metadata...'
++ echo '[INFO] Generating collection metadata...'
+[INFO] Generating collection metadata...
++ collect_metadata /mnt/h/project/weekend_projects/project3/SlowPro/cases/CASE_2026-06-16_09-53-25
++ local CASE_DIR=/mnt/h/project/weekend_projects/project3/SlowPro/cases/CASE_2026-06-16_09-53-25
++ local OUTPUT_FILE=/mnt/h/project/weekend_projects/project3/SlowPro/cases/CASE_2026-06-16_09-53-25/analysis/collection_metadata.json
++ local CASE_ID
+++ basename /mnt/h/project/weekend_projects/project3/SlowPro/cases/CASE_2026-06-16_09-53-25
++ CASE_ID=CASE_2026-06-16_09-53-25
++ cat
+++ date -Iseconds
+++ hostname
+++ grep '^PRETTY_NAME=' /etc/os-release
+++ cut -d= -f2
+++ tr -d '"'
++ log_info 'Collecting host information...'
++ echo '[INFO] Collecting host information...'
+[INFO] Collecting host information...
++ collect_host_info /mnt/h/project/weekend_projects/project3/SlowPro/cases/CASE_2026-06-16_09-53-25
++ local CASE_DIR=/mnt/h/project/weekend_projects/project3/SlowPro/cases/CASE_2026-06-16_09-53-25
++ local OUTPUT_FILE=/mnt/h/project/weekend_projects/project3/SlowPro/cases/CASE_2026-06-16_09-53-25/artifacts/host/host.json
++ cat
+++ hostname
+++ uname -r
+++ uname -m
+++ grep '^PRETTY_NAME=' /etc/os-release
+++ cut -d= -f2
+++ tr -d '"'
+++ date -Iseconds
++ log_info 'Collecting user information...'
++ echo '[INFO] Collecting user information...'
+[INFO] Collecting user information...
++ collect_users /mnt/h/project/weekend_projects/project3/SlowPro/cases/CASE_2026-06-16_09-53-25
++ local CASE_DIR=/mnt/h/project/weekend_projects/project3/SlowPro/cases/CASE_2026-06-16_09-53-25
++ local OUTPUT_FILE=/mnt/h/project/weekend_projects/project3/SlowPro/cases/CASE_2026-06-16_09-53-25/artifacts/users/users.json
++ echo '['
++ awk -F: '{print $1}' /etc/passwd
++ read USER
++ echo '  {"username":"root"},'
++ read USER
++ echo '  {"username":"daemon"},'
++ read USER
++ echo '  {"username":"bin"},'
++ read USER
++ echo '  {"username":"sys"},'
++ read USER
++ echo '  {"username":"sync"},'
++ read USER
++ echo '  {"username":"games"},'
++ read USER
++ echo '  {"username":"man"},'
++ read USER
++ echo '  {"username":"lp"},'
++ read USER
++ echo '  {"username":"mail"},'
++ read USER
++ echo '  {"username":"news"},'
++ read USER
++ echo '  {"username":"uucp"},'
++ read USER
++ echo '  {"username":"proxy"},'
++ read USER
++ echo '  {"username":"www-data"},'
++ read USER
++ echo '  {"username":"backup"},'
++ read USER
++ echo '  {"username":"list"},'
++ read USER
++ echo '  {"username":"irc"},'
++ read USER
++ echo '  {"username":"_apt"},'
++ read USER
++ echo '  {"username":"nobody"},'
++ read USER
++ echo '  {"username":"systemd-network"},'
++ read USER
++ echo '  {"username":"systemd-timesync"},'
++ read USER
++ echo '  {"username":"dhcpcd"},'
++ read USER
++ echo '  {"username":"messagebus"},'
++ read USER
++ echo '  {"username":"syslog"},'
++ read USER
++ echo '  {"username":"systemd-resolve"},'
++ read USER
++ echo '  {"username":"uuidd"},'
++ read USER
++ echo '  {"username":"landscape"},'
++ read USER
++ echo '  {"username":"polkitd"},'
++ read USER
++ echo '  {"username":"inoske"},'
++ read USER
++ echo '  {"username":"msmtp"},'
++ read USER
++ echo '  {"username":"sshd"},'
++ read USER
++ sed -i '$ s/,$//' /mnt/h/project/weekend_projects/project3/SlowPro/cases/CASE_2026-06-16_09-53-25/artifacts/users/users.json
++ echo ']'
++ log_info 'Collecting process information...'
++ echo '[INFO] Collecting process information...'
+[INFO] Collecting process information...
++ collect_processes /mnt/h/project/weekend_projects/project3/SlowPro/cases/CASE_2026-06-16_09-53-25
++ local CASE_DIR=/mnt/h/project/weekend_projects/project3/SlowPro/cases/CASE_2026-06-16_09-53-25
++ local OUTPUT_FILE=/mnt/h/project/weekend_projects/project3/SlowPro/cases/CASE_2026-06-16_09-53-25/artifacts/processes/processes.json
++ ps -eo pid,user,args --no-headers
++ awk '
+BEGIN {
+print "["
+}
+{
+printf "{\"pid\":\"%s\",\"user\":\"%s\",\"command\":\"%s\"},\n",
+$1,$2,$3
+}
+
+END {
+print "]"
+}
+'
++ log_info 'Collecting network information...'
++ echo '[INFO] Collecting network information...'
+[INFO] Collecting network information...
++ collect_network /mnt/h/project/weekend_projects/project3/SlowPro/cases/CASE_2026-06-16_09-53-25
++ local CASE_DIR=/mnt/h/project/weekend_projects/project3/SlowPro/cases/CASE_2026-06-16_09-53-25
++ local OUTPUT_FILE=/mnt/h/project/weekend_projects/project3/SlowPro/cases/CASE_2026-06-16_09-53-25/artifacts/network/network.txt
++ ss -tuln
++ log_info 'Collecting service information...'
++ echo '[INFO] Collecting service information...'
+[INFO] Collecting service information...
++ collect_services /mnt/h/project/weekend_projects/project3/SlowPro/cases/CASE_2026-06-16_09-53-25
++ local CASE_DIR=/mnt/h/project/weekend_projects/project3/SlowPro/cases/CASE_2026-06-16_09-53-25
++ local OUTPUT_FILE=/mnt/h/project/weekend_projects/project3/SlowPro/cases/CASE_2026-06-16_09-53-25/artifacts/services/services.txt
++ systemctl list-units --type=service --no-pager
++ log_info 'Collecting installed packages...'
++ echo '[INFO] Collecting installed packages...'
+[INFO] Collecting installed packages...
++ collect_packages /mnt/h/project/weekend_projects/project3/SlowPro/cases/CASE_2026-06-16_09-53-25
++ local CASE_DIR=/mnt/h/project/weekend_projects/project3/SlowPro/cases/CASE_2026-06-16_09-53-25
++ local OUTPUT_FILE=/mnt/h/project/weekend_projects/project3/SlowPro/cases/CASE_2026-06-16_09-53-25/artifacts/packages/packages.txt
++ case "$PACKAGE_MANAGER" in
++ dpkg -l
++ log_info 'Generating evidence hashes...'
++ echo '[INFO] Generating evidence hashes...'
+[INFO] Generating evidence hashes...
++ generate_hashes /mnt/h/project/weekend_projects/project3/SlowPro/cases/CASE_2026-06-16_09-53-25
++ local CASE_DIR=/mnt/h/project/weekend_projects/project3/SlowPro/cases/CASE_2026-06-16_09-53-25
++ local HASH_FILE=/mnt/h/project/weekend_projects/project3/SlowPro/cases/CASE_2026-06-16_09-53-25/integrity/hashes.txt
++ find /mnt/h/project/weekend_projects/project3/SlowPro/cases/CASE_2026-06-16_09-53-25/artifacts -type f
++ read FILE
++ sha256sum /mnt/h/project/weekend_projects/project3/SlowPro/cases/CASE_2026-06-16_09-53-25/artifacts/host/host.json
++ read FILE
++ sha256sum /mnt/h/project/weekend_projects/project3/SlowPro/cases/CASE_2026-06-16_09-53-25/artifacts/network/network.txt
++ read FILE
++ sha256sum /mnt/h/project/weekend_projects/project3/SlowPro/cases/CASE_2026-06-16_09-53-25/artifacts/packages/packages.txt
++ read FILE
++ sha256sum /mnt/h/project/weekend_projects/project3/SlowPro/cases/CASE_2026-06-16_09-53-25/artifacts/processes/processes.json
++ read FILE
++ sha256sum /mnt/h/project/weekend_projects/project3/SlowPro/cases/CASE_2026-06-16_09-53-25/artifacts/services/services.txt
++ read FILE
++ sha256sum /mnt/h/project/weekend_projects/project3/SlowPro/cases/CASE_2026-06-16_09-53-25/artifacts/users/users.json
++ read FILE
++ log_info 'Running IOC analysis...'
++ echo '[INFO] Running IOC analysis...'
+[INFO] Running IOC analysis...
++ analyze_iocs /mnt/h/project/weekend_projects/project3/SlowPro/cases/CASE_2026-06-16_09-53-25
++ local CASE_DIR=/mnt/h/project/weekend_projects/project3/SlowPro/cases/CASE_2026-06-16_09-53-25
++ local REPORT_FILE=/mnt/h/project/weekend_projects/project3/SlowPro/cases/CASE_2026-06-16_09-53-25/analysis/ioc_report.txt
++ echo ==================================
++ echo '      SlowPro IOC Report'
++ echo ==================================
++ echo ''
++ echo '[Suspicious Users]'
++ read IOC_USER
++ grep -q '"username":"admin"' /mnt/h/project/weekend_projects/project3/SlowPro/cases/CASE_2026-06-16_09-53-25/artifacts/users/users.json
++ read IOC_USER
++ grep -q '"username":"test"' /mnt/h/project/weekend_projects/project3/SlowPro/cases/CASE_2026-06-16_09-53-25/artifacts/users/users.json
++ read IOC_USER
++ grep -q '"username":"guest"' /mnt/h/project/weekend_projects/project3/SlowPro/cases/CASE_2026-06-16_09-53-25/artifacts/users/users.json
++ read IOC_USER
++ grep -q '"username":"backup"' /mnt/h/project/weekend_projects/project3/SlowPro/cases/CASE_2026-06-16_09-53-25/artifacts/users/users.json
++ read IOC_USER
++ echo ''
++ echo '[Suspicious Processes]'
++ read IOC_PROCESS
++ grep -qi $'nc\r' /mnt/h/project/weekend_projects/project3/SlowPro/cases/CASE_2026-06-16_09-53-25/artifacts/processes/processes.json
++ read IOC_PROCESS
++ grep -qi $'netcat\r' /mnt/h/project/weekend_projects/project3/SlowPro/cases/CASE_2026-06-16_09-53-25/artifacts/processes/processes.json
++ read IOC_PROCESS
++ grep -qi $'ncat\r' /mnt/h/project/weekend_projects/project3/SlowPro/cases/CASE_2026-06-16_09-53-25/artifacts/processes/processes.json
++ read IOC_PROCESS
++ grep -qi $'socat\r' /mnt/h/project/weekend_projects/project3/SlowPro/cases/CASE_2026-06-16_09-53-25/artifacts/processes/processes.json
++ read IOC_PROCESS
++ grep -qi $'cryptominer\r' /mnt/h/project/weekend_projects/project3/SlowPro/cases/CASE_2026-06-16_09-53-25/artifacts/processes/processes.json
++ read IOC_PROCESS
++ echo ''
++ echo '[Suspicious Ports]'
++ read IOC_PORT
++ grep -q $':4444\r' /mnt/h/project/weekend_projects/project3/SlowPro/cases/CASE_2026-06-16_09-53-25/artifacts/network/network.txt
++ read IOC_PORT
++ grep -q $':5555\r' /mnt/h/project/weekend_projects/project3/SlowPro/cases/CASE_2026-06-16_09-53-25/artifacts/network/network.txt
++ read IOC_PORT
++ grep -q $':1337\r' /mnt/h/project/weekend_projects/project3/SlowPro/cases/CASE_2026-06-16_09-53-25/artifacts/network/network.txt
++ read IOC_PORT
++ echo ''
++ log_info 'Calculating threat score...'
++ echo '[INFO] Calculating threat score...'
+[INFO] Calculating threat score...
++ calculate_threat_score /mnt/h/project/weekend_projects/project3/SlowPro/cases/CASE_2026-06-16_09-53-25
++ local CASE_DIR=/mnt/h/project/weekend_projects/project3/SlowPro/cases/CASE_2026-06-16_09-53-25
++ local IOC_REPORT=/mnt/h/project/weekend_projects/project3/SlowPro/cases/CASE_2026-06-16_09-53-25/analysis/ioc_report.txt
++ local SCORE_FILE=/mnt/h/project/weekend_projects/project3/SlowPro/cases/CASE_2026-06-16_09-53-25/analysis/threat_score.txt
++ local SCORE=0
+++ grep -c '\[MATCH\]' /mnt/h/project/weekend_projects/project3/SlowPro/cases/CASE_2026-06-16_09-53-25/analysis/ioc_report.txt
++ wMATCHES=0
++ SCORE=0
++ '[' 0 -gt 100 ']'
++ '[' 0 -ge 80 ']'
++ '[' 0 -ge 50 ']'
++ '[' 0 -ge 20 ']'
++ RISK=Low
++ echo 'Threat Score : 0/100'
++ echo 'Risk Level   : Low'
++ echo 'IOC Matches  : '
++ log_info 'Building investigation timeline...'
++ echo '[INFO] Building investigation timeline...'
+[INFO] Building investigation timeline...
++ build_timeline /mnt/h/project/weekend_projects/project3/SlowPro/cases/CASE_2026-06-16_09-53-25
++ local CASE_DIR=/mnt/h/project/weekend_projects/project3/SlowPro/cases/CASE_2026-06-16_09-53-25
++ local OUTPUT_FILE=/mnt/h/project/weekend_projects/project3/SlowPro/cases/CASE_2026-06-16_09-53-25/analysis/timeline.txt
++ echo ==================================
++ echo '      SlowPro Timeline'
++ echo ==================================
++ echo
+++ date -Iseconds
++ echo '2026-06-16T09:53:25+00:00 | Case Created'
+++ date -Iseconds
++ echo '2026-06-16T09:53:25+00:00 | Host Collection Completed'
+++ date -Iseconds
++ echo '2026-06-16T09:53:25+00:00 | User Collection Completed'
+++ date -Iseconds
++ echo '2026-06-16T09:53:25+00:00 | Process Collection Completed'
+++ date -Iseconds
++ echo '2026-06-16T09:53:25+00:00 | Network Collection Completed'
+++ date -Iseconds
++ echo '2026-06-16T09:53:25+00:00 | Service Collection Completed'
+++ date -Iseconds
++ echo '2026-06-16T09:53:25+00:00 | Package Collection Completed'
+++ date -Iseconds
++ echo '2026-06-16T09:53:25+00:00 | Integrity Verification Completed'
+++ date -Iseconds
++ echo '2026-06-16T09:53:25+00:00 | IOC Analysis Completed'
+++ date -Iseconds
++ echo '2026-06-16T09:53:25+00:00 | Threat Scoring Completed'
++ log_info 'Generating HTML report...'
++ echo '[INFO] Generating HTML report...'
+[INFO] Generating HTML report...
++ generate_report /mnt/h/project/weekend_projects/project3/SlowPro/cases/CASE_2026-06-16_09-53-25
++ local CASE_DIR=/mnt/h/project/weekend_projects/project3/SlowPro/cases/CASE_2026-06-16_09-53-25
++ local REPORT_FILE=/mnt/h/project/weekend_projects/project3/SlowPro/cases/CASE_2026-06-16_09-53-25/reports/report.html
++ local SCORE_FILE=/mnt/h/project/weekend_projects/project3/SlowPro/cases/CASE_2026-06-16_09-53-25/analysis/threat_score.txt
++ local IOC_FILE=/mnt/h/project/weekend_projects/project3/SlowPro/cases/CASE_2026-06-16_09-53-25/analysis/ioc_report.txt
++ local TIMELINE_FILE=/mnt/h/project/weekend_projects/project3/SlowPro/cases/CASE_2026-06-16_09-53-25/analysis/timeline.txt
++ cat
+++ cat /mnt/h/project/weekend_projects/project3/SlowPro/cases/CASE_2026-06-16_09-53-25/analysis/threat_score.txt
+++ cat /mnt/h/project/weekend_projects/project3/SlowPro/cases/CASE_2026-06-16_09-53-25/analysis/ioc_report.txt
+++ cat /mnt/h/project/weekend_projects/project3/SlowPro/cases/CASE_2026-06-16_09-53-25/analysis/timeline.txt
++ log_info 'Collecting authentication logs...'
++ echo '[INFO] Collecting authentication logs...'
+[INFO] Collecting authentication logs...
++ collect_auth_logs /mnt/h/project/weekend_projects/project3/SlowPro/cases/CASE_2026-06-16_09-53-25
++ local CASE_DIR=/mnt/h/project/weekend_projects/project3/SlowPro/cases/CASE_2026-06-16_09-53-25
++ mkdir -p /mnt/h/project/weekend_projects/project3/SlowPro/cases/CASE_2026-06-16_09-53-25/artifacts/logs
++ [[ -f /var/log/auth.log ]]
++ cp /var/log/auth.log /mnt/h/project/weekend_projects/project3/SlowPro/cases/CASE_2026-06-16_09-53-25/artifacts/logs/auth.log
++ [[ -f /var/log/secure ]]
++ log_info 'Analyzing authentication logs...'
++ echo '[INFO] Analyzing authentication logs...'
+[INFO] Analyzing authentication logs...
++ analyze_auth_logs /mnt/h/project/weekend_projects/project3/SlowPro/cases/CASE_2026-06-16_09-53-25
++ local CASE_DIR=/mnt/h/project/weekend_projects/project3/SlowPro/cases/CASE_2026-06-16_09-53-25
++ local REPORT_FILE=/mnt/h/project/weekend_projects/project3/SlowPro/cases/CASE_2026-06-16_09-53-25/analysis/auth_report.txt
++ echo ==================================
++ echo '   SlowPro Authentication Report'
++ echo ==================================
++ echo
++ echo '[Failed SSH Logins]'
++ grep 'Failed password'

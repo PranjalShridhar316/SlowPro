@@ -34,6 +34,7 @@ source "$SCRIPT_DIR/collectors/network_collector.sh"
 source "$SCRIPT_DIR/collectors/service_collector.sh"
 source "$SCRIPT_DIR/collectors/package_collector.sh"
 source "$SCRIPT_DIR/collectors/metadata_collector.sh"
+source "$SCRIPT_DIR/collectors/authlog_collector.sh"
 
 # Analyzers
 
@@ -42,6 +43,7 @@ source "$SCRIPT_DIR/analyzers/threat_scoring.sh"
 source "$SCRIPT_DIR/analyzers/timeline_builder.sh"
 source "$SCRIPT_DIR/analyzers/report_generator.sh"
 source "$SCRIPT_DIR/analyzers/snapshot_compare.sh"
+source "$SCRIPT_DIR/analyzers/authlog_analyzer.sh"
 
 #=================================================
 
@@ -149,6 +151,14 @@ build_timeline "$CASE_PATH"
 # Reporting
 log_info "Generating HTML report..."
 generate_report "$CASE_PATH"
+
+# Collect authentication logs
+log_info "Collecting authentication logs..."
+collect_auth_logs "$CASE_PATH"
+
+# Authentication log analysis
+log_info "Analyzing authentication logs..."
+analyze_auth_logs "$CASE_PATH"
 
 # Complete
 log_success "Evidence collection completed."
