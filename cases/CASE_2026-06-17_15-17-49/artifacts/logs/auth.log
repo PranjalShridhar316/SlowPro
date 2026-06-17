@@ -1,0 +1,141 @@
+2026-06-14T02:20:57.886285+00:00 PAHADImirg login[312]: PAM unable to dlopen(pam_lastlog.so): /usr/lib/security/pam_lastlog.so: cannot open shared object file: No such file or directory
+2026-06-14T02:20:57.886380+00:00 PAHADImirg login[312]: PAM adding faulty module: pam_lastlog.so
+2026-06-14T02:20:58.199302+00:00 PAHADImirg login[312]: pam_unix(login:session): session opened for user inoske(uid=1000) by inoske(uid=0)
+2026-06-14T02:20:58.240215+00:00 PAHADImirg systemd-logind[181]: New session 1 of user inoske.
+2026-06-14T02:20:58.252108+00:00 PAHADImirg (systemd): pam_unix(systemd-user:session): session opened for user inoske(uid=1000) by inoske(uid=0)
+2026-06-14T02:24:51.468328+00:00 PAHADImirg sudo:   inoske : TTY=pts/0 ; PWD=/mnt/h/project/weekend_projects/project3/SlowPro ; USER=root ; COMMAND=./slowpro.sh
+2026-06-14T02:24:51.468694+00:00 PAHADImirg sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-06-14T02:24:52.277438+00:00 PAHADImirg sudo: pam_unix(sudo:session): session closed for user root
+2026-06-14T02:27:20.993814+00:00 PAHADImirg sudo:   inoske : TTY=pts/0 ; PWD=/mnt/h/project/weekend_projects/project3/SlowPro ; USER=root ; COMMAND=./slowpro.sh
+2026-06-14T02:27:20.994504+00:00 PAHADImirg sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-06-14T02:27:21.491921+00:00 PAHADImirg sudo: pam_unix(sudo:session): session closed for user root
+2026-06-14T02:29:44.957592+00:00 PAHADImirg sudo:   inoske : TTY=pts/0 ; PWD=/mnt/h/project/weekend_projects/project3/SlowPro ; USER=root ; COMMAND=./slowpro.sh
+2026-06-14T02:29:44.958165+00:00 PAHADImirg sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-06-14T02:29:45.442529+00:00 PAHADImirg sudo: pam_unix(sudo:session): session closed for user root
+2026-06-14T02:46:13.972310+00:00 PAHADImirg sudo:   inoske : TTY=pts/0 ; PWD=/mnt/h/project/weekend_projects/project3/SlowPro ; USER=root ; COMMAND=./slowpro.sh
+2026-06-14T02:46:13.978063+00:00 PAHADImirg sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-06-14T02:46:14.527413+00:00 PAHADImirg sudo: pam_unix(sudo:session): session closed for user root
+2026-06-14T02:47:26.933565+00:00 PAHADImirg polkitd[1761]: Loading rules from directory /etc/polkit-1/rules.d
+2026-06-14T02:47:26.933833+00:00 PAHADImirg polkitd[1761]: Loading rules from directory /usr/share/polkit-1/rules.d
+2026-06-14T02:47:26.936969+00:00 PAHADImirg polkitd[1761]: Finished loading, compiling and executing 4 rules
+2026-06-14T02:47:26.937869+00:00 PAHADImirg polkitd[1761]: Acquired the name org.freedesktop.PolicyKit1 on the system bus
+2026-06-14T02:53:59.271845+00:00 PAHADImirg sudo:   inoske : TTY=pts/0 ; PWD=/mnt/h/project/weekend_projects/project3/SlowPro ; USER=root ; COMMAND=./slowpro.sh
+2026-06-14T02:53:59.274688+00:00 PAHADImirg sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-06-14T02:53:59.866693+00:00 PAHADImirg sudo: pam_unix(sudo:session): session closed for user root
+2026-06-14T02:56:54.309984+00:00 PAHADImirg sudo:   inoske : TTY=pts/0 ; PWD=/mnt/h/project/weekend_projects/project3/SlowPro ; USER=root ; COMMAND=./slowpro.sh
+2026-06-14T02:56:54.312632+00:00 PAHADImirg sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-06-14T02:56:54.854808+00:00 PAHADImirg sudo: pam_unix(sudo:session): session closed for user root
+2026-06-14T03:06:42.559845+00:00 PAHADImirg sudo:   inoske : TTY=pts/0 ; PWD=/mnt/h/project/weekend_projects/project3/SlowPro ; USER=root ; COMMAND=./slowpro.sh
+2026-06-14T03:06:42.562536+00:00 PAHADImirg sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-06-14T03:06:43.139959+00:00 PAHADImirg sudo: pam_unix(sudo:session): session closed for user root
+2026-06-14T03:10:01.578526+00:00 PAHADImirg CRON[3435]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-06-14T03:10:01.580401+00:00 PAHADImirg CRON[3435]: pam_unix(cron:session): session closed for user root
+2026-06-14T03:16:06.032027+00:00 PAHADImirg sudo:   inoske : TTY=pts/0 ; PWD=/mnt/h/project/weekend_projects/project3/SlowPro ; USER=root ; COMMAND=./slowpro.sh
+2026-06-14T03:16:06.034479+00:00 PAHADImirg sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-06-14T03:16:06.586114+00:00 PAHADImirg sudo: pam_unix(sudo:session): session closed for user root
+2026-06-14T03:17:01.803680+00:00 PAHADImirg CRON[4120]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-06-14T03:17:01.807577+00:00 PAHADImirg CRON[4120]: pam_unix(cron:session): session closed for user root
+2026-06-14T03:48:20.606903+00:00 PAHADImirg CRON[4806]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-06-14T03:48:20.609770+00:00 PAHADImirg CRON[4806]: pam_unix(cron:session): session closed for user root
+2026-06-14T04:02:55.364129+00:00 PAHADImirg sudo:   inoske : TTY=pts/0 ; PWD=/mnt/h/project/weekend_projects/project3/SlowPro ; USER=root ; COMMAND=./slowpro.sh
+2026-06-14T04:02:55.370681+00:00 PAHADImirg sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-06-14T04:02:55.976251+00:00 PAHADImirg sudo: pam_unix(sudo:session): session closed for user root
+2026-06-14T04:03:46.770027+00:00 PAHADImirg sudo:   inoske : TTY=pts/0 ; PWD=/mnt/h/project/weekend_projects/project3/SlowPro ; USER=root ; COMMAND=./slowpro.sh --compare cases/CASE_2026-06-14_02-27-21 cases/CASE_2026-06-14_02-56-54
+2026-06-14T04:03:46.770544+00:00 PAHADImirg sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-06-14T04:03:47.351913+00:00 PAHADImirg sudo: pam_unix(sudo:session): session closed for user root
+2026-06-14T04:03:56.067793+00:00 PAHADImirg sudo:   inoske : TTY=pts/0 ; PWD=/mnt/h/project/weekend_projects/project3/SlowPro ; USER=root ; COMMAND=./slowpro.sh --compare cases/CASE_2026-06-14_02-27-21 cases/CASE_2026-06-14_02-56-54
+2026-06-14T04:03:56.068586+00:00 PAHADImirg sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-06-14T04:03:56.636364+00:00 PAHADImirg sudo: pam_unix(sudo:session): session closed for user root
+2026-06-14T04:08:49.104337+00:00 PAHADImirg sudo:   inoske : TTY=pts/0 ; PWD=/mnt/h/project/weekend_projects/project3/SlowPro ; USER=root ; COMMAND=./slowpro.sh --compare cases/CASE_2026-06-14_02-27-21 cases/CASE_2026-06-14_02-56-54
+2026-06-14T04:08:49.106242+00:00 PAHADImirg sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-06-14T04:08:49.512410+00:00 PAHADImirg sudo: pam_unix(sudo:session): session closed for user root
+2026-06-14T04:17:01.453285+00:00 PAHADImirg CRON[5907]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-06-14T04:17:01.457521+00:00 PAHADImirg CRON[5907]: pam_unix(cron:session): session closed for user root
+2026-06-14T04:50:37.570942+00:00 PAHADImirg systemd-logind[181]: The system will power off now!
+2026-06-14T04:50:37.638846+00:00 PAHADImirg systemd-logind[181]: System is powering down.
+2026-06-16T09:29:41.528508+00:00 PAHADImirg sshd[187]: Server listening on 0.0.0.0 port 22.
+2026-06-16T09:29:41.528515+00:00 PAHADImirg sshd[187]: Server listening on :: port 22.
+2026-06-16T09:29:41.528540+00:00 PAHADImirg systemd-logind[178]: New seat seat0.
+2026-06-16T09:29:42.375590+00:00 PAHADImirg login[308]: PAM unable to dlopen(pam_lastlog.so): /usr/lib/security/pam_lastlog.so: cannot open shared object file: No such file or directory
+2026-06-16T09:29:42.375690+00:00 PAHADImirg login[308]: PAM adding faulty module: pam_lastlog.so
+2026-06-16T09:29:42.734954+00:00 PAHADImirg login[308]: pam_unix(login:session): session opened for user inoske(uid=1000) by inoske(uid=0)
+2026-06-16T09:29:42.801160+00:00 PAHADImirg systemd-logind[178]: New session 1 of user inoske.
+2026-06-16T09:29:42.817689+00:00 PAHADImirg (systemd): pam_unix(systemd-user:session): session opened for user inoske(uid=1000) by inoske(uid=0)
+2026-06-16T09:34:14.342070+00:00 PAHADImirg sudo:   inoske : TTY=pts/0 ; PWD=/mnt/h/project/weekend_projects/project3/SlowPro ; USER=root ; COMMAND=./slowpro.sh
+2026-06-16T09:34:14.342385+00:00 PAHADImirg sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-06-16T09:34:15.139926+00:00 PAHADImirg sudo: pam_unix(sudo:session): session closed for user root
+2026-06-16T09:37:13.319749+00:00 PAHADImirg sudo:   inoske : TTY=pts/0 ; PWD=/mnt/h/project/weekend_projects/project3/SlowPro ; USER=root ; COMMAND=./slowpro.sh
+2026-06-16T09:37:13.320172+00:00 PAHADImirg sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-06-16T09:38:09.840961+00:00 PAHADImirg sudo:   inoske : TTY=pts/3 ; PWD=/mnt/h/project/weekend_projects/project3/SlowPro ; USER=root ; COMMAND=./slowpro.sh
+2026-06-16T09:38:09.841287+00:00 PAHADImirg sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-06-16T09:38:57.521577+00:00 PAHADImirg sudo: pam_unix(sudo:session): session closed for user root
+2026-06-16T09:38:59.470927+00:00 PAHADImirg sudo: pam_unix(sudo:session): session closed for user root
+2026-06-16T09:43:04.380973+00:00 PAHADImirg sudo:   inoske : TTY=pts/0 ; PWD=/mnt/h/project/weekend_projects/project3/SlowPro ; USER=root ; COMMAND=./slowpro.sh
+2026-06-16T09:43:04.383567+00:00 PAHADImirg sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-06-16T09:43:57.898250+00:00 PAHADImirg sudo: pam_unix(sudo:session): session closed for user root
+2026-06-16T09:49:18.021917+00:00 PAHADImirg sudo:   inoske : TTY=pts/0 ; PWD=/mnt/h/project/weekend_projects/project3/SlowPro ; USER=root ; COMMAND=./slowpro.sh
+2026-06-16T09:49:18.027220+00:00 PAHADImirg sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-06-16T09:49:18.579709+00:00 PAHADImirg sudo: pam_unix(sudo:session): session closed for user root
+2026-06-16T09:52:06.930494+00:00 PAHADImirg sudo:   inoske : TTY=pts/0 ; PWD=/mnt/h/project/weekend_projects/project3/SlowPro ; USER=root ; COMMAND=./slowpro.sh
+2026-06-16T09:52:06.935596+00:00 PAHADImirg sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-06-16T09:52:52.026896+00:00 PAHADImirg sudo: pam_unix(sudo:session): session closed for user root
+2026-06-16T09:52:52.808358+00:00 PAHADImirg polkitd[2945]: Loading rules from directory /etc/polkit-1/rules.d
+2026-06-16T09:52:52.808697+00:00 PAHADImirg polkitd[2945]: Loading rules from directory /usr/share/polkit-1/rules.d
+2026-06-16T09:52:52.810289+00:00 PAHADImirg polkitd[2945]: Finished loading, compiling and executing 4 rules
+2026-06-16T09:52:52.811191+00:00 PAHADImirg polkitd[2945]: Acquired the name org.freedesktop.PolicyKit1 on the system bus
+2026-06-16T09:53:25.144351+00:00 PAHADImirg sudo:   inoske : TTY=pts/0 ; PWD=/mnt/h/project/weekend_projects/project3/SlowPro ; USER=root ; COMMAND=/usr/bin/bash -x ./slowpro.sh
+2026-06-16T09:53:25.144855+00:00 PAHADImirg sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-06-16T09:54:04.007584+00:00 PAHADImirg sudo: pam_unix(sudo:session): session closed for user root
+2026-06-16T09:58:03.680901+00:00 PAHADImirg sudo:   inoske : TTY=pts/0 ; PWD=/mnt/h/project/weekend_projects/project3/SlowPro ; USER=root ; COMMAND=./slowpro.sh
+2026-06-16T09:58:03.683776+00:00 PAHADImirg sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-06-16T09:58:04.306114+00:00 PAHADImirg sudo: pam_unix(sudo:session): session closed for user root
+2026-06-16T10:01:33.616331+00:00 PAHADImirg sudo:   inoske : TTY=pts/0 ; PWD=/mnt/h/project/weekend_projects/project3/SlowPro ; USER=root ; COMMAND=./slowpro.sh
+2026-06-16T10:01:33.617257+00:00 PAHADImirg sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-06-16T10:02:05.409098+00:00 PAHADImirg sudo: pam_unix(sudo:session): session closed for user root
+2026-06-16T10:02:07.302879+00:00 PAHADImirg sudo:   inoske : TTY=pts/0 ; PWD=/mnt/h/project/weekend_projects/project3/SlowPro ; USER=root ; COMMAND=/usr/bin/bash -x ./slowpro.sh
+2026-06-16T10:02:07.303417+00:00 PAHADImirg sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-06-16T10:17:01.841584+00:00 PAHADImirg CRON[4608]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-06-16T10:17:01.846080+00:00 PAHADImirg CRON[4608]: pam_unix(cron:session): session closed for user root
+2026-06-16T11:05:18.767599+00:00 PAHADImirg sudo: pam_unix(sudo:session): session closed for user root
+2026-06-16T11:08:57.575531+00:00 PAHADImirg sudo:   inoske : TTY=pts/0 ; PWD=/mnt/h/project/weekend_projects/project3/SlowPro ; USER=root ; COMMAND=./slowpro.sh
+2026-06-16T11:08:57.581322+00:00 PAHADImirg sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-06-16T11:08:58.255461+00:00 PAHADImirg sudo: pam_unix(sudo:session): session closed for user root
+2026-06-16T11:17:00.068055+00:00 PAHADImirg CRON[5030]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-06-16T11:17:00.070625+00:00 PAHADImirg CRON[5030]: pam_unix(cron:session): session closed for user root
+2026-06-16T11:20:51.792058+00:00 PAHADImirg sudo:   inoske : TTY=pts/2 ; PWD=/mnt/h/project/weekend_projects/project3/SlowPro ; USER=root ; COMMAND=./slowpro.sh
+2026-06-16T11:20:51.797746+00:00 PAHADImirg sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-06-16T11:20:52.418705+00:00 PAHADImirg sudo: pam_unix(sudo:session): session closed for user root
+2026-06-16T11:23:10.165164+00:00 PAHADImirg sudo:   inoske : TTY=pts/2 ; PWD=/mnt/h/project/weekend_projects/project3/SlowPro ; USER=root ; COMMAND=./slowpro.sh
+2026-06-16T11:23:10.167113+00:00 PAHADImirg sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-06-16T11:23:11.021304+00:00 PAHADImirg sudo: pam_unix(sudo:session): session closed for user root
+2026-06-16T11:24:26.827169+00:00 PAHADImirg sudo:   inoske : TTY=pts/2 ; PWD=/mnt/h/project/weekend_projects/project3/SlowPro ; USER=root ; COMMAND=./slowpro.sh
+2026-06-16T11:24:26.827654+00:00 PAHADImirg sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-06-16T11:24:27.492777+00:00 PAHADImirg sudo: pam_unix(sudo:session): session closed for user root
+2026-06-16T11:25:19.511215+00:00 PAHADImirg sudo:   inoske : TTY=pts/2 ; PWD=/mnt/h/project/weekend_projects/project3/SlowPro ; USER=root ; COMMAND=./slowpro.sh
+2026-06-16T11:25:19.511763+00:00 PAHADImirg sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-06-16T11:25:20.201079+00:00 PAHADImirg sudo: pam_unix(sudo:session): session closed for user root
+2026-06-16T12:16:38.635840+00:00 PAHADImirg systemd-logind[178]: The system will power off now!
+2026-06-16T12:16:38.736958+00:00 PAHADImirg systemd-logind[178]: System is powering down.
+2026-06-17T12:49:25.413748+00:00 PAHADImirg sshd[224]: Server listening on 0.0.0.0 port 22.
+2026-06-17T12:49:25.413751+00:00 PAHADImirg sshd[224]: Server listening on :: port 22.
+2026-06-17T12:49:25.413780+00:00 PAHADImirg systemd-logind[199]: New seat seat0.
+2026-06-17T12:49:26.425094+00:00 PAHADImirg login[399]: PAM unable to dlopen(pam_lastlog.so): /usr/lib/security/pam_lastlog.so: cannot open shared object file: No such file or directory
+2026-06-17T12:49:26.425219+00:00 PAHADImirg login[399]: PAM adding faulty module: pam_lastlog.so
+2026-06-17T12:49:26.740812+00:00 PAHADImirg login[399]: pam_unix(login:session): session opened for user inoske(uid=1000) by inoske(uid=0)
+2026-06-17T12:49:26.796309+00:00 PAHADImirg systemd-logind[199]: New session 1 of user inoske.
+2026-06-17T12:49:26.810358+00:00 PAHADImirg (systemd): pam_unix(systemd-user:session): session opened for user inoske(uid=1000) by inoske(uid=0)
+2026-06-17T12:54:09.543067+00:00 PAHADImirg polkitd[837]: Loading rules from directory /etc/polkit-1/rules.d
+2026-06-17T12:54:09.543496+00:00 PAHADImirg polkitd[837]: Loading rules from directory /usr/share/polkit-1/rules.d
+2026-06-17T12:54:09.545654+00:00 PAHADImirg polkitd[837]: Finished loading, compiling and executing 4 rules
+2026-06-17T12:54:09.546458+00:00 PAHADImirg polkitd[837]: Acquired the name org.freedesktop.PolicyKit1 on the system bus
+2026-06-17T13:17:00.060551+00:00 PAHADImirg CRON[1626]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-06-17T13:17:00.065051+00:00 PAHADImirg CRON[1626]: pam_unix(cron:session): session closed for user root
+2026-06-17T14:17:01.250901+00:00 PAHADImirg CRON[1655]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-06-17T14:17:01.255987+00:00 PAHADImirg CRON[1655]: pam_unix(cron:session): session closed for user root
+2026-06-17T15:13:24.924369+00:00 PAHADImirg sudo:   inoske : TTY=pts/0 ; PWD=/mnt/h/project/weekend_projects/project3/SlowPro ; USER=root ; COMMAND=./slowpro.sh
+2026-06-17T15:13:24.929660+00:00 PAHADImirg sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-06-17T15:13:25.958002+00:00 PAHADImirg sudo: pam_unix(sudo:session): session closed for user root
+2026-06-17T15:17:01.297664+00:00 PAHADImirg CRON[2117]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-06-17T15:17:01.301386+00:00 PAHADImirg CRON[2117]: pam_unix(cron:session): session closed for user root
+2026-06-17T15:17:49.371681+00:00 PAHADImirg sudo:   inoske : TTY=pts/0 ; PWD=/mnt/h/project/weekend_projects/project3/SlowPro ; USER=root ; COMMAND=./slowpro.sh
+2026-06-17T15:17:49.375849+00:00 PAHADImirg sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)

@@ -48,6 +48,7 @@ source "$SCRIPT_DIR/analyzers/snapshot_compare.sh"
 source "$SCRIPT_DIR/analyzers/authlog_analyzer.sh"
 source "$SCRIPT_DIR/analyzers/ssh_bruteforce_detector.sh"
 source "$SCRIPT_DIR/analyzers/ioc_matcher.sh"
+source "$SCRIPT_DIR/analyzers/persistence_hunter.sh"
 
 #=================================================
 
@@ -147,6 +148,9 @@ analyze_iocs "$CASE_PATH"
 
 log_info "Running IOC matching engine..."
 match_iocs "$CASE_PATH"
+
+log_info "Hunting persistence..."
+hunt_persistence "$CASE_PATH"
 
 log_info "Calculating threat score..."
 calculate_threat_score "$CASE_PATH"
