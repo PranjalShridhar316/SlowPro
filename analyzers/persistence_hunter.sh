@@ -20,7 +20,6 @@
 
 hunt_persistence() {
 
-```
 # Investigation case directory
 local CASE_DIR="$1"
 
@@ -40,7 +39,6 @@ echo
 
 echo "[System Crontab]"
 cat /etc/crontab 2>/dev/null
-
 echo
 
 # ==========================================
@@ -49,7 +47,6 @@ echo
 
 echo "[Cron Directories]"
 ls -la /etc/cron.* 2>/dev/null
-
 echo
 
 # ==========================================
@@ -67,24 +64,20 @@ echo "[Suspicious Cron Jobs]"
 echo
 
 CRON_DATA=$(
-    grep -v '^#' /etc/crontab 2>/dev/null |
-    grep -v '^$'
-
-    grep -R "" /etc/cron.* 2>/dev/null |
-    grep -v '^#' |
-    grep -v '^$'
+grep -v '^#' /etc/crontab 2>/dev/null |
+grep -v '^$'
+grep -R "" /etc/cron.* 2>/dev/null |
+grep -v '^#' |
+grep -v '^$'
 )
 
 for IOC in curl wget nc netcat socat python python3 perl
 do
-
-    if echo "$CRON_DATA" | grep -qi "$IOC"
-    then
-        echo "[ALERT] Possible persistence keyword detected: $IOC"
-    fi
-
+if echo "$CRON_DATA" | grep -qi "$IOC"
+then
+secho "[ALERT] Possible persistence keyword detected: $IOC"
+fi
 done
-
 echo
 
 # ==========================================
@@ -93,7 +86,6 @@ echo
 
 echo "[Enabled Services]"
 systemctl list-unit-files --state=enabled 2>/dev/null
-
 echo
 
 # ==========================================
@@ -119,26 +111,19 @@ systemctl list-unit-files \
 awk '{print $1}' |
 while read -r SERVICE
 do
-
-    # Retrieve service definition
-    SERVICE_CONTENT=$(systemctl cat "$SERVICE" 2>/dev/null)
-
-    # Extract ExecStart line only
-    EXEC_LINE=$(echo "$SERVICE_CONTENT" | grep "^ExecStart=")
-
-    # Look for suspicious execution paths
-    if echo "$EXEC_LINE" | \
-    grep -Eq "/tmp|/var/tmp|/dev/shm|/home"
-    then
-
-        echo "[ALERT] Suspicious service detected: $SERVICE"
-        echo "$EXEC_LINE"
-        echo
-
-    fi
-
+# Retrieve service definition
+SERVICE_CONTENT=$(systemctl cat "$SERVICE" 2>/dev/null)
+# Extract ExecStart line only
+EXEC_LINE=$(echo "$SERVICE_CONTENT" | grep "^ExecStart=")
+# Look for suspicious execution paths
+if echo "$EXEC_LINE" | \
+grep -Eq "/tmp|/var/tmp|/dev/shm|/home"
+then
+echo "[ALERT] Suspicious service detected: $SERVICE"
+echo "$EXEC_LINE"
+echo
+fi
 done
-
 echo
 
 # ==========================================
@@ -149,6 +134,4 @@ echo "[Summary]"
 echo "Persistence enumeration completed."
 
 } > "$REPORT_FILE"
-```
-
 }
