@@ -49,6 +49,7 @@ source "$SCRIPT_DIR/analyzers/authlog_analyzer.sh"
 source "$SCRIPT_DIR/analyzers/ssh_bruteforce_detector.sh"
 source "$SCRIPT_DIR/analyzers/ioc_matcher.sh"
 source "$SCRIPT_DIR/analyzers/persistence_hunter.sh"
+source "$SCRIPT_DIR/analyzers/privesc_hunter.sh"
 
 #=================================================
 
@@ -174,6 +175,10 @@ analyze_auth_logs "$CASE_PATH"
 # Brutefore detection
 log_info "Detecting SSH brute force activity..."
 detect_ssh_bruteforce "$CASE_PATH"
+
+# Privilege Escalation Hunting
+log_info "Running Privilege Escalation Hunter..."
+privesc_hunter "$CASE_PATH"
 
 # Complete
 log_success "Evidence collection completed."

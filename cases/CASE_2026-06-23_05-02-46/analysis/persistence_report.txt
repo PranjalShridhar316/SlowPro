@@ -1,0 +1,137 @@
+==================================
+   SlowPro Persistence Report
+==================================
+
+[System Crontab]
+# /etc/crontab: system-wide crontab
+# Unlike any other crontab you don't have to run the `crontab'
+# command to install the new version when you edit this file
+# and files in /etc/cron.d. These files also have username fields,
+# that none of the other crontabs do.
+
+SHELL=/bin/sh
+# You can also override PATH, but by default, newer versions inherit it from the environment
+#PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+
+# Example of job definition:
+# .---------------- minute (0 - 59)
+# |  .------------- hour (0 - 23)
+# |  |  .---------- day of month (1 - 31)
+# |  |  |  .------- month (1 - 12) OR jan,feb,mar,apr ...
+# |  |  |  |  .---- day of week (0 - 6) (Sunday=0 or 7) OR sun,mon,tue,wed,thu,fri,sat
+# |  |  |  |  |
+# *  *  *  *  * user-name command to be executed
+17 *	* * *	root	cd / && run-parts --report /etc/cron.hourly
+25 6	* * *	root	test -x /usr/sbin/anacron || { cd / && run-parts --report /etc/cron.daily; }
+47 6	* * 7	root	test -x /usr/sbin/anacron || { cd / && run-parts --report /etc/cron.weekly; }
+52 6	1 * *	root	test -x /usr/sbin/anacron || { cd / && run-parts --report /etc/cron.monthly; }
+#
+
+[Cron Directories]
+/etc/cron.d:
+total 16
+drwxr-xr-x  2 root root 4096 Jan  6  2025 .
+drwxr-xr-x 94 root root 4096 Jun 23 05:02 ..
+-rw-r--r--  1 root root  102 Mar 31  2024 .placeholder
+-rw-r--r--  1 root root  201 Apr  8  2024 e2scrub_all
+
+/etc/cron.daily:
+total 32
+drwxr-xr-x  2 root root 4096 May 31 06:32 .
+drwxr-xr-x 94 root root 4096 Jun 23 05:02 ..
+-rw-r--r--  1 root root  102 Mar 31  2024 .placeholder
+-rwxr-xr-x  1 root root  376 Oct 26  2024 apport
+-rwxr-xr-x  1 root root 1478 Mar 22  2024 apt-compat
+-rwxr-xr-x  1 root root  123 Feb  5  2024 dpkg
+-rwxr-xr-x  1 root root  377 Apr  8  2024 logrotate
+-rwxr-xr-x  1 root root 1395 Mar 29  2024 man-db
+
+/etc/cron.hourly:
+total 12
+drwxr-xr-x  2 root root 4096 Jan  6  2025 .
+drwxr-xr-x 94 root root 4096 Jun 23 05:02 ..
+-rw-r--r--  1 root root  102 Mar 31  2024 .placeholder
+
+/etc/cron.monthly:
+total 12
+drwxr-xr-x  2 root root 4096 Jan  6  2025 .
+drwxr-xr-x 94 root root 4096 Jun 23 05:02 ..
+-rw-r--r--  1 root root  102 Mar 31  2024 .placeholder
+
+/etc/cron.weekly:
+total 16
+drwxr-xr-x  2 root root 4096 Jan  6  2025 .
+drwxr-xr-x 94 root root 4096 Jun 23 05:02 ..
+-rw-r--r--  1 root root  102 Mar 31  2024 .placeholder
+-rwxr-xr-x  1 root root 1055 Mar 29  2024 man-db
+
+/etc/cron.yearly:
+total 12
+drwxr-xr-x  2 root root 4096 Jan  6  2025 .
+drwxr-xr-x 94 root root 4096 Jun 23 05:02 ..
+-rw-r--r--  1 root root  102 Mar 31  2024 .placeholder
+
+[Suspicious Cron Jobs]
+
+
+[Enabled Services]
+UNIT FILE                              STATE   PRESET
+apport-autoreport.path                 enabled enabled
+apparmor.service                       enabled enabled
+apport.service                         enabled enabled
+cloud-config.service                   enabled enabled
+cloud-final.service                    enabled enabled
+cloud-init-local.service               enabled enabled
+cloud-init.service                     enabled enabled
+console-setup.service                  enabled enabled
+cron.service                           enabled enabled
+dmesg.service                          enabled enabled
+e2scrub_reap.service                   enabled enabled
+fail2ban.service                       enabled enabled
+getty@.service                         enabled enabled
+keyboard-setup.service                 enabled enabled
+landscape-client.service               enabled enabled
+networkd-dispatcher.service            enabled enabled
+rsyslog.service                        enabled enabled
+setvtrgb.service                       enabled enabled
+snapd.apparmor.service                 enabled enabled
+snapd.autoimport.service               enabled enabled
+snapd.core-fixup.service               enabled enabled
+snapd.recovery-chooser-trigger.service enabled enabled
+snapd.seeded.service                   enabled enabled
+snapd.service                          enabled enabled
+snapd.system-shutdown.service          enabled enabled
+ssh.service                            enabled enabled
+systemd-pstore.service                 enabled enabled
+systemd-resolved.service               enabled enabled
+systemd-timesyncd.service              enabled enabled
+ua-reboot-cmds.service                 enabled enabled
+ubuntu-advantage.service               enabled enabled
+unattended-upgrades.service            enabled enabled
+wsl-pro.service                        enabled enabled
+apport-forward.socket                  enabled enabled
+cloud-init-hotplugd.socket             enabled enabled
+snapd.socket                           enabled enabled
+ssh.socket                             enabled enabled
+uuidd.socket                           enabled enabled
+remote-fs.target                       enabled enabled
+apport-autoreport.timer                enabled enabled
+apt-daily-upgrade.timer                enabled enabled
+apt-daily.timer                        enabled enabled
+dpkg-db-backup.timer                   enabled enabled
+e2scrub_all.timer                      enabled enabled
+fstrim.timer                           enabled enabled
+logrotate.timer                        enabled enabled
+lynis.timer                            enabled enabled
+man-db.timer                           enabled enabled
+motd-news.timer                        enabled enabled
+snapd.snap-repair.timer                enabled enabled
+ua-timer.timer                         enabled enabled
+
+51 unit files listed.
+
+[Suspicious Services]
+
+
+[Summary]
+Persistence enumeration completed.

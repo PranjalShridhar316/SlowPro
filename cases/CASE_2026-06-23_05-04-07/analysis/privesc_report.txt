@@ -1,0 +1,34 @@
+==================================
+ SlowPro PrivEsc Report
+==================================
+
+[SUID Binaries]
+
+/usr/bin/passwd
+/usr/bin/chsh
+/usr/bin/fusermount3
+/usr/bin/gpasswd
+/usr/bin/su
+/usr/bin/newgrp
+/usr/bin/sudo
+/usr/bin/mount
+/usr/bin/umount
+/usr/bin/chfn
+/usr/lib/polkit-1/polkit-agent-helper-1
+/usr/lib/openssh/ssh-keysign
+/usr/lib/dbus-1.0/dbus-daemon-launch-helper
+/usr/lib/landscape/apt-update
+/usr/bin/passwd
+/usr/bin/chsh
+/usr/bin/fusermount3
+/usr/bin/gpasswd
+/usr/bin/su
+/usr/bin/newgrp
+/usr/bin/sudo
+/usr/bin/mount
+/usr/bin/umount
+/usr/bin/chfn
+
+
+[SGID Binaries]
+

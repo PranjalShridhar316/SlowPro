@@ -1,0 +1,6 @@
+a47c7ceeff1fc641c2da944edaf4e5a3cad2d99b52be5f10a2f86b67d5974cdf  /mnt/h/project/weekend_projects/project3/SlowPro/cases/CASE_2026-06-23_05-06-18/artifacts/host/host.json
+484c0d498ace5f0a89941106ece013a63307ee743415dc601cd84944f13ac03b  /mnt/h/project/weekend_projects/project3/SlowPro/cases/CASE_2026-06-23_05-06-18/artifacts/network/network.txt
+47d9e0dd1ba66d8259248ed3e49be226019747a8db02e6fdb99150ad57cef633  /mnt/h/project/weekend_projects/project3/SlowPro/cases/CASE_2026-06-23_05-06-18/artifacts/packages/packages.txt
+853691897624c93e3423da0a7e52da43f1cd24a2d4f47dc126b3224f121bbfdb  /mnt/h/project/weekend_projects/project3/SlowPro/cases/CASE_2026-06-23_05-06-18/artifacts/processes/processes.json
+9c06965c8cd7121f70cbd42876cf2aa614b3d3d10002732198b540723be01acb  /mnt/h/project/weekend_projects/project3/SlowPro/cases/CASE_2026-06-23_05-06-18/artifacts/services/services.txt
+5f24bf572beb3ae5def544df74ccdb03016c776fa813c3a485c72af4821dae46  /mnt/h/project/weekend_projects/project3/SlowPro/cases/CASE_2026-06-23_05-06-18/artifacts/users/users.json

@@ -1,0 +1,74 @@
+==================================
+ SlowPro PrivEsc Report
+==================================
+
+[SUID Binaries]
+
+/usr/bin/passwd
+/usr/bin/chsh
+/usr/bin/fusermount3
+/usr/bin/gpasswd
+/usr/bin/su
+/usr/bin/newgrp
+/usr/bin/sudo
+/usr/bin/mount
+/usr/bin/umount
+/usr/bin/chfn
+/usr/lib/polkit-1/polkit-agent-helper-1
+/usr/lib/openssh/ssh-keysign
+/usr/lib/dbus-1.0/dbus-daemon-launch-helper
+/usr/lib/landscape/apt-update
+
+
+[SGID Binaries]
+
+/usr/bin/expiry
+/usr/bin/chage
+/usr/bin/crontab
+/usr/bin/ssh-agent
+/usr/bin/dotlock.mailutils
+/usr/lib/x86_64-linux-gnu/utempter/utempter
+/usr/sbin/unix_chkpwd
+/usr/sbin/pam_extrausers_chkpwd
+
+
+[World Writable Files]
+
+Total World Writable Files: 0
+
+
+
+[World Writable Directories]
+
+Total World Writable Directories: 20
+
+/var/tmp
+/var/tmp/systemd-private-87c42b654abe4d0f9b963813c9b3479a-wsl-pro.service-kSSQ55/tmp
+/var/tmp/systemd-private-87c42b654abe4d0f9b963813c9b3479a-systemd-logind.service-u7uv6k/tmp
+/var/tmp/systemd-private-87c42b654abe4d0f9b963813c9b3479a-systemd-timesyncd.service-JKZFaF/tmp
+/var/tmp/systemd-private-87c42b654abe4d0f9b963813c9b3479a-systemd-resolved.service-qkHuVK/tmp
+/var/tmp/systemd-private-87c42b654abe4d0f9b963813c9b3479a-polkit.service-aSipAa/tmp
+/var/crash
+/tmp
+/tmp/systemd-private-87c42b654abe4d0f9b963813c9b3479a-wsl-pro.service-C7Ou94/tmp
+/tmp/.X11-unix
+/tmp/systemd-private-87c42b654abe4d0f9b963813c9b3479a-systemd-resolved.service-7aVXUR/tmp
+/tmp/systemd-private-87c42b654abe4d0f9b963813c9b3479a-systemd-logind.service-CTuwZX/tmp
+/tmp/systemd-private-87c42b654abe4d0f9b963813c9b3479a-systemd-timesyncd.service-3sWXNW/tmp
+/tmp/systemd-private-87c42b654abe4d0f9b963813c9b3479a-polkit.service-RZnKX8/tmp
+/mnt/h
+/mnt/wsl
+/mnt/wslg
+/mnt/g
+/mnt/d
+/mnt/c
+
+
+[Summary]
+
+SUID Binaries: 14
+SGID Binaries: 8
+World Writable Files: 0
+World Writable Directories: 20
+
+Privilege Escalation Enumeration Completed.
